@@ -1,0 +1,30 @@
+
+public class Palindrome{  
+	
+	   public static boolean isPalindrome(String str) {
+		   String reverse = "";
+		   str = str.replaceAll("[^a-zA-Z]", "").toLowerCase();   
+		    int length = str.length();
+		 
+		      for ( int i = length - 1; i >= 0; i-- )
+		         reverse = reverse + str.charAt(i);
+		      
+		      System.out.println(str);
+		      System.out.println(reverse);
+		 
+		      if (str.equals(reverse))
+		         System.out.println("Entered string is a palindrome.");
+		      		
+		      else
+		         System.out.println("Entered string is not a palindrome.");
+			
+		 return (str.equals(reverse));
+		   }
+	    
+ 
+public static void main(String[] args) {
+	System.out.println(isPalindrome("Live on evasions? No, I save no evil."));
+
+}
+
+}
